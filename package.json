@@ -1,6 +1,6 @@
 {
   "name": "@cmglez10/ng-datatable",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "DataTable component for Angular framework",
   "main": "index.js",
   "scripts": {
@@ -30,9 +30,9 @@
   "author": "cmglez10@gmail.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mariuszfoltak/angular2-datatable/issues"
+    "url": "https://github.com/cmglez10/ng-datatable/issues"
   },
-  "homepage": "https://github.com/mariuszfoltak/angular2-datatable#readme",
+  "homepage": "https://github.com/cmglez10/ng-datatable#readme",
   "devDependencies": {
     "@angular/core": "^6.0.0",
     "@angular/compiler": "^6.0.0",
@@ -42,20 +42,20 @@
     "@angular/compiler-cli": "^6.0.0",
     "core-js": "^2.5.5",
     "http-server": "^0.11.1",
-    "jasmine-core": "^2.8.0",
+    "jasmine-core": "^3.1.0",
     "karma": "^2.0.2",
     "karma-chrome-launcher": "^2.2.0",
     "karma-coverage": "^1.1.2",
     "karma-jasmine": "^1.1.2",
     "karma-phantomjs-launcher": "^1.0.4",
     "phantomjs-prebuilt": "^2.1.7",
-    "remap-istanbul": "^0.10.1",
+    "remap-istanbul": "^0.11.1",
     "rxjs": "^6.0.0",
     "systemjs": "^0.21.3",
     "typescript": "2.7.x",
     "zone.js": "^0.8.26",
     "rimraf": "^2.6.2",
-    "@types/lodash": "4.14.108",
+    "@types/lodash": "4.14.109",
     "@types/jasmine": "^2.8.7"
   },
   "dependencies": {

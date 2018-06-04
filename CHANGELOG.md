@@ -1,13 +1,19 @@
 # Changelog
 
-## 0.7.0 (2018-03-15)
-
+## 0.8.0 (2018-04-16)
 
 Changes:
-    
+
+    - Updated to Angular 6 & RxJS 6
+    - Reduced install time by not publishing tests & uncompiled TypeScript files
+
+## 0.7.0 (2018-03-15)
+
+Changes:
+
     - First commit of forked project (@cmglez10/ng-datatable)
     - Updated to Angular 5
-    
+
 ## 0.6.0 (2017-03-27)
 
 Fixes:
@@ -17,9 +23,9 @@ Fixes:
 ## 0.5.2 (2016-11-13)
 
 Changes:
-    
+
     - added inputs/outputs for sorting (#14)
-    
+
 Bugfixes:
 
     - detect changes in inputData array (#10)
@@ -32,7 +38,7 @@ Changes:
     
     - changed the old "typings" system to the new "@types" system
     - added support for AOT compilation
-    
+
 Bugfixes:
 
     - sorting by child properties (#41)
@@ -42,12 +48,12 @@ Bugfixes:
 Breaking changes:
 
     - update angular library to 2.0.0
-    
+
 Bugfixes:
 
     - sort case insensitive
     - fixed pagination, fix #29, #33
-    
+
 #Changelog
 
 ## 0.4.2 (2016-05-11)
@@ -85,10 +91,10 @@ Bugfixes:
 
     - remove `href` attribute from DefaultSorter
     - add style `cursor: pointer` to links in DefaultSorter and BootstrapPaginator
-    
+
 ## 0.2.2 (2016-03-21)
 
 Bugfixes:
 
     - remove `href` attribute from BootstrapPaginator template
-    
+

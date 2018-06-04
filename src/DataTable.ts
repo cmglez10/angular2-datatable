@@ -2,7 +2,7 @@ import {
     Directive, Input, EventEmitter, SimpleChange, OnChanges, DoCheck, IterableDiffers,
     IterableDiffer, Output
 } from "@angular/core";
-import * as _ from "lodash";
+import {slice, includes, orderBy} from "lodash";
 import {ReplaySubject} from "rxjs";
 
 export interface SortEvent {
@@ -55,7 +55,7 @@ export class DataTable implements OnChanges, DoCheck {
     public setSort(sortBy: string|string[], sortOrder: string): void {
         if (this.sortBy !== sortBy || this.sortOrder !== sortOrder) {
             this.sortBy = sortBy;
-            this.sortOrder = _.includes(["asc","desc"], sortOrder) ? sortOrder : "asc";
+            this.sortOrder = includes(["asc","desc"], sortOrder) ? sortOrder : "asc";
             this.mustRecalculateData = true;
             this.onSortChange.next({sortBy: sortBy, sortOrder: sortOrder});
             this.sortByChange.emit(this.sortBy);
@@ -105,7 +105,7 @@ export class DataTable implements OnChanges, DoCheck {
             this.mustRecalculateData = true;
         }
         if (changes["sortBy"] || changes["sortOrder"]) {
-            if (!_.includes(["asc", "desc"], this.sortOrder)) {
+            if (!includes(["asc", "desc"], this.sortOrder)) {
                 console.warn("angular2-datatable: value for input mfSortOrder must be one of ['asc', 'desc'], but is:", this.sortOrder);
                 this.sortOrder = "asc";
             }
@@ -141,11 +141,11 @@ export class DataTable implements OnChanges, DoCheck {
         let data = this.inputData;
         var sortBy = this.sortBy;
         if (typeof sortBy === 'string' || sortBy instanceof String) {
-            data = _.orderBy(data, this.caseInsensitiveIteratee(<string>sortBy), [this.sortOrder]);
+            data = orderBy(data, this.caseInsensitiveIteratee(<string>sortBy), [this.sortOrder]);
         } else {
-            data = _.orderBy(data, sortBy, [this.sortOrder]);
+            data = orderBy(data, sortBy, [this.sortOrder]);
         }
-        data = _.slice(data, offset, offset + this.rowsOnPage);
+        data = slice(data, offset, offset + this.rowsOnPage);
         this.data = data;
     }
 

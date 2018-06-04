@@ -1,11 +1,9 @@
-/coverage/
-/examples/
-/.git/
-/.idea/
-/node_modules/
-/src/typings/
-/aot
+coverage/
+examples/
+.idea/
+src/
 
+*.spec.ts
 .codeclimate.yml
 devrelease.sh
 .eslintignore
