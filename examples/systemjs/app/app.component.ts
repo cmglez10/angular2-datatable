@@ -1,6 +1,5 @@
 import {Component, OnInit} from "@angular/core";
-import {Http} from "@angular/http";
-
+import {HttpClient} from "@angular/common/http";
 
 @Component({
     selector: 'app',
@@ -14,14 +13,14 @@ export class AppComponent implements OnInit {
     public sortBy = "email";
     public sortOrder = "asc";
 
-    constructor(private http: Http) {
+    constructor(private http: HttpClient) {
     }
 
     ngOnInit(): void {
-        this.http.get("/app/data.json")
+        this.http.get<any[]>("/app/data.json")
             .subscribe((data)=> {
                 setTimeout(()=> {
-                    this.data = data.json();
+                    this.data = data;
                 }, 2000);
             });
     }
