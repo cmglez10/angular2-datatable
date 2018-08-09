@@ -33,7 +33,6 @@ export class DataTable implements OnChanges, DoCheck {
     @Input("mfSortOrder") public sortOrder = "asc";
     @Output("mfSortByChange") public sortByChange = new EventEmitter<string|string[]>();
     @Output("mfSortOrderChange") public sortOrderChange = new EventEmitter<string>();
-    @Output("SetPage") public setPageEventEmitter = new EventEmitter<number>();
 
     @Input("mfRowsOnPage") public rowsOnPage = 1000;
     @Input("mfActivePage") public activePage = 1;
@@ -43,7 +42,7 @@ export class DataTable implements OnChanges, DoCheck {
     public data: any[];
 
     public onSortChange = new ReplaySubject<SortEvent>(1);
-    public onPageChange = new EventEmitter<PageEvent>();
+    @Output("onPageChange") public onPageChange = new EventEmitter<PageEvent>();
 
     public constructor(private differs: IterableDiffers) {
         this.diff = differs.find([]).create(null);
@@ -79,7 +78,6 @@ export class DataTable implements OnChanges, DoCheck {
                 dataLength: this.inputData ? this.inputData.length : 0
             });
         }
-        this.setPageEventEmitter.emit(this.activePage);
     }
 
     private calculateNewActivePage(previousRowsOnPage: number, currentRowsOnPage: number): number {
