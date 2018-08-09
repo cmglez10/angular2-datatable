@@ -82,6 +82,7 @@ AppComponent.html
  - outputs
    - `mfSortByChange: any` - sort by parameter
    - `mfSortOrderChange: any` - sort order parameter
+   - `onPageChange: any` - current page deatils.
  
 ### `mfDefaultSorter` component
 
