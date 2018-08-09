@@ -1,6 +1,6 @@
 {
-  "name": "@cmglez10/ng-datatable",
-  "version": "0.7.0",
+  "name": "@chaitanya11/ng-datatable",
+  "version": "0.0.1",
   "description": "DataTable component for Angular framework",
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cmglez10/ng-datatable.git"
+    "url": "git+https://github.com/chaitanya11/ng-datatable.git"
   },
   "keywords": [
     "angular",
@@ -27,12 +27,12 @@
     "sort",
     "sorting"
   ],
-  "author": "cmglez10@gmail.com",
+  "author": "chaitanya.garikipati123@gmail.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mariuszfoltak/angular2-datatable/issues"
+    "url": "https://github.com/chaitanya11/ng-datatable/issues"
   },
-  "homepage": "https://github.com/mariuszfoltak/angular2-datatable#readme",
+  "homepage": "https://github.com/chaitanya11/ng-datatable#readme",
   "devDependencies": {
     "@angular/core": "^6.0.0",
     "@angular/compiler": "^6.0.0",

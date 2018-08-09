@@ -100,7 +100,8 @@ export class DataTable implements OnChanges, DoCheck {
 
     public ngOnChanges(changes: {[key: string]: SimpleChange}): any {
         if (changes["rowsOnPage"]) {
-            this.rowsOnPage = changes["rowsOnPage"].previousValue;
+            let previousValue = changes["rowsOnPage"].previousValue;
+            this.rowsOnPage = previousValue ? previousValue : this.rowsOnPage;
             this.setPage(this.activePage, changes["rowsOnPage"].currentValue);
             this.mustRecalculateData = true;
         }
