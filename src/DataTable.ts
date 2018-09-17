@@ -42,7 +42,7 @@ export class DataTable implements OnChanges, DoCheck {
     public data: any[];
 
     public onSortChange = new ReplaySubject<SortEvent>(1);
-    public onPageChange = new EventEmitter<PageEvent>();
+    @Output("onPageChange") public onPageChange = new EventEmitter<PageEvent>();
 
     public constructor(private differs: IterableDiffers) {
         this.diff = differs.find([]).create(null);
@@ -100,7 +100,8 @@ export class DataTable implements OnChanges, DoCheck {
 
     public ngOnChanges(changes: {[key: string]: SimpleChange}): any {
         if (changes["rowsOnPage"]) {
-            this.rowsOnPage = changes["rowsOnPage"].previousValue;
+            let previousValue = changes["rowsOnPage"].previousValue;
+            this.rowsOnPage = previousValue ? previousValue : this.rowsOnPage;
             this.setPage(this.activePage, changes["rowsOnPage"].currentValue);
             this.mustRecalculateData = true;
         }

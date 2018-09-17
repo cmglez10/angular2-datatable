@@ -6,8 +6,8 @@ import {DataTable, SortEvent} from "./DataTable";
     template: `
         <a style="cursor: pointer" (click)="sort()" class="text-nowrap">
             <ng-content></ng-content>
-            <span *ngIf="isSortedByMeAsc" class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>
-            <span *ngIf="isSortedByMeDesc" class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
+            <span *ngIf="isSortedByMeAsc" class="glyphicon glyphicon-triangle-top fa fa-sort-up fe fe-arrow-up" aria-hidden="true"></span>
+            <span *ngIf="isSortedByMeDesc" class="glyphicon glyphicon-triangle-bottom fa fa-sort-down fe fe-arrow-down" aria-hidden="true"></span>
         </a>`
 })
 export class DefaultSorter implements OnInit {
