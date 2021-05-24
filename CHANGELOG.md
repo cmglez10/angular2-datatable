@@ -1,5 +1,59 @@
 # Changelog
 
+## 12.0.1 (2020-11-23)
+
+Changes:
+
+- Use Angular 12
+- Sort headers are now 508 compliant and are usable by keyboard (Thanks @kvbutler)
+- Publish in partial-ivy support - Angular ivy compiler required
+- Stricter type declarations to prevent surprising runtime errors
+
+## 11.1.0 (2020-11-23)
+
+Changes:
+    
+    - Remove dependency to lodash
+
+## 11.0.1 (2020-11-23)
+
+Changes:
+    
+    - Specify correct peer dependency version
+
+## 11.0.0 (2020-11-15)
+
+Changes:
+    
+    - Use Angular 11
+
+## 10.0.0 (2020-06-27)
+
+Changes:
+    
+    - Use Angular 10
+
+## 9.0.1 (2019-11-06)
+
+Changes:
+    
+    - Use Angular 9
+    - Use Angular CLI for build pipeline
+    - Fix some linting issues
+
+## 8.0.0 (2019-11-06)
+
+Changes:
+    
+    - Use Angular 8
+
+## 2.0.0 (2018-07-10)
+
+Changes:
+    
+    - Published as package @pascalhonegger/ng-datatable
+    - Use Angular 7
+
 ## 0.7.3 (2018-10-04)
 
 Changes:

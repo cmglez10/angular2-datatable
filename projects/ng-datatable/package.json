@@ -1,0 +1,35 @@
+{
+  "name": "@pascalhonegger/ng-datatable",
+  "version": "12.0.1",
+  "description": "DataTable component for Angular framework",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PascalHonegger/ng-datatable.git"
+  },
+  "keywords": [
+    "angular",
+    "angular12",
+    "angularcli",
+    "ivy",
+    "ng",
+    "ng2",
+    "ngx",
+    "table",
+    "pagination",
+    "sort",
+    "sorting"
+  ],
+  "author": "pascal.honegger@bluewin.ch",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PascalHonegger/ng-datatable/issues"
+  },
+  "homepage": "https://github.com/PascalHonegger/ng-datatable#readme",
+  "peerDependencies": {
+    "@angular/common": "^12.0.0",
+    "@angular/core": "^12.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  }
+}

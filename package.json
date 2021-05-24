@@ -1,70 +1,55 @@
 {
-  "name": "@cmglez10/ng-datatable",
-  "version": "0.7.3",
-  "description": "DataTable component for Angular framework",
-  "main": "index.js",
+  "name": "ng-datatable",
+  "version": "0.0.0",
   "scripts": {
-    "prebuild": "rimraf lib",
-    "build": "ngc -p src",
-    "start": "http-server -c-1 -o -p 8875 .",
-    "pretest": "npm run build",
-    "test": "karma start karma.conf.js",
-    "posttest": "node_modules/.bin/remap-istanbul -i coverage/coverage-final.json -o coverage -t html",
-    "coverage-remap": "remap-istanbul -i coverage/coverage-final.json -o coverage/coverage-remapped.lcov -t lcovonly",
-    "coverage": "http-server -c-1 -o -p 9875 ./coverage"
+    "ng": "ng",
+    "start": "npm run build:lib && ng serve demo",
+    "build:lib": "ng build ng-datatable",
+    "test": "ng test",
+    "lint": "ng lint",
+    "publish:prod": "npm run build:lib && cd dist/ng-datatable && npm publish",
+    "publish:dev": "npm run build:lib && cd dist/ng-datatable && npm publish --tag dev"
   },
+  "author": "pascal.honegger@bluewin.ch",
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cmglez10/ng-datatable.git"
+    "url": "git+https://github.com/PascalHonegger/ng-datatable.git"
   },
-  "keywords": [
-    "angular",
-    "angular6",
-    "ng",
-    "ng2",
-    "table",
-    "pagination",
-    "sort",
-    "sorting"
-  ],
-  "author": "cmglez10@gmail.com",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/cmglez10/ng-datatable/issues"
-  },
-  "homepage": "https://github.com/cmglez10/ng-datatable#readme",
-  "devDependencies": {
-    "@angular/common": "^6.0.0",
-    "@angular/compiler": "^6.0.0",
-    "@angular/compiler-cli": "^6.0.0",
-    "@angular/core": "^6.0.0",
-    "@angular/platform-browser": "^6.0.0",
-    "@angular/platform-browser-dynamic": "^6.0.0",
-    "@types/jasmine": "^2.8.7",
-    "@types/lodash": "4.14.109",
-    "core-js": "^2.5.5",
-    "http-server": "^0.11.1",
-    "jasmine-core": "^3.1.0",
-    "karma": "^3.0.0",
-    "karma-chrome-launcher": "^2.2.0",
-    "karma-coverage": "^1.1.2",
-    "karma-jasmine": "^1.1.2",
-    "karma-phantomjs-launcher": "^1.0.4",
-    "phantomjs-prebuilt": "^2.1.16",
-    "remap-istanbul": "^0.11.1",
-    "rimraf": "^2.6.2",
-    "rxjs": "^6.0.0",
-    "systemjs": "^0.21.3",
-    "typescript": "2.7.x",
-    "zone.js": "^0.8.26"
-  },
+  "private": true,
   "dependencies": {
-    "lodash": "^4.17.10"
+    "@angular/animations": "~12.0.0",
+    "@angular/common": "~12.0.0",
+    "@angular/compiler": "~12.0.0",
+    "@angular/core": "~12.0.0",
+    "@angular/forms": "~12.0.0",
+    "@angular/platform-browser": "~12.0.0",
+    "@angular/platform-browser-dynamic": "~12.0.0",
+    "@angular/router": "~12.0.0",
+    "bootstrap": "^3.4.1",
+    "rxjs": "~6.6.3",
+    "tslib": "^2.2.0",
+    "zone.js": "~0.11.4"
   },
-  "peerDependencies": {
-    "@angular/core": "^6.0.0",
-    "@angular/common": "^6.0.0",
-    "@angular/platform-browser": "^6.0.0",
-    "rxjs": "^6.0.0"
+  "devDependencies": {
+    "@angular-devkit/build-angular": "~12.0.0",
+    "@angular/cli": "~12.0.0",
+    "@angular/compiler-cli": "~12.0.0",
+    "@angular/language-service": "~12.0.0",
+    "@types/jasmine": "~3.7.4",
+    "@types/jasminewd2": "~2.0.9",
+    "@types/node": "^15.6.0",
+    "codelyzer": "^6.0.2",
+    "jasmine-core": "~3.7.1",
+    "jasmine-spec-reporter": "~7.0.0",
+    "karma": "~6.3.2",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage-istanbul-reporter": "~3.0.3",
+    "karma-jasmine": "~4.0.0",
+    "karma-jasmine-html-reporter": "^1.6.0",
+    "ng-packagr": "^12.0.0",
+    "protractor": "~7.0.0",
+    "tslint": "~6.1.3",
+    "typescript": "~4.2.4"
   }
 }
